@@ -6,7 +6,7 @@ const router = express.Router();
 /* GET home page. */
 router.post("/", async function (req, res, next) {
   const payload = req.body;
-
+  console.log(payload);
   try {
     const response = await axios.request(payload);
     return res.json(response.data);
