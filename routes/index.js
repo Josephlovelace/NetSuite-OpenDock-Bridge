@@ -9,7 +9,7 @@ router.post("/", function (req, res, next) {
   console.log(payload);
   try {
     axios.request(payload);
-    return res.status(200);
+    return res.status(200).send();
   } catch (error) {
     return res.status(500).send(error.message);
   }
